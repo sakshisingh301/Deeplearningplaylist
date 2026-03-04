@@ -1,4 +1,4 @@
-##What is a Perceptron
+## What is a Perceptron
 
 A Perceptron is one of the simplest machine learning algorithms and is considered the basic building block of neural networks. It is a binary classifier, meaning it predicts one of two classes (for example: 0 or 1).
 
@@ -10,7 +10,7 @@ Mathematically:
 
 The perceptron learns by adjusting the weights whenever it makes a wrong prediction.
 
-**Key Properties of Perceptron: **
+## Key Properties of Perceptron:
 
 Works for binary classification problems
 
@@ -20,7 +20,7 @@ Learns weights using an iterative update rule
 
 Only works well if the data is linearly separable
 
-Decision Boundary
+## Decision Boundary
 
 The perceptron separates classes using a straight line (in 2D) or hyperplane (in higher dimensions).
 
