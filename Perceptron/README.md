@@ -52,3 +52,111 @@ Extracted the learned weights and bias
 Visualized the decision boundary using plot_decision_regions
 
 The model learns a line that separates students who were placed vs not placed based on their CGPA and resume score.
+
+## Perceptron Training – Simple Notes
+
+1. What Happens During Training
+
+When we train a machine learning model, the model learns by adjusting weights.
+
+Two important things exist during training:
+
+1. Weights
+2. Learning rate
+
+## 2. Weights
+
+Weights tell the model how important each feature is.
+
+Example:
+
+If we have two features:
+
+x1 = study hours
+x2 = sleep hours
+
+Model:
+
+z = w1*x1 + w2*x2 + b
+
+Where
+
+w1, w2 → weights
+b → bias
+
+## During training:
+
+weights keep changing
+
+The model changes them to reduce prediction errors.
+
+3. Learning Rate
+
+Learning rate controls how big the weight update step is.
+
+Example:
+
+lr = 0.1
+
+It means the model adjusts weights slowly and carefully.
+
+Think of learning rate like step size when walking toward a goal.
+
+## 4. Weight Update Rule (Perceptron)
+
+The perceptron updates weights using this rule:
+
+new weight = old weight + learning_rate _ (actual - predicted) _ input
+
+In code:
+
+weights = weights + lr*(y - y_hat)*X
+
+Where
+
+y → actual label
+y_hat → predicted label
+X → input features
+lr → learning rate 5. Step Function
+
+Perceptron uses a step function to make predictions.
+
+if z > 0 → class 1
+else → class 0
+
+Where
+
+z = w1*x1 + w2*x2 + b 6. Training Process
+
+Training works like this:
+
+1. Pick a data point
+2. Calculate prediction
+3. Compare with actual label
+4. If wrong → update weights
+5. Repeat many times
+
+After many iterations, the model learns good weights.
+
+7. What Stays Constant?
+
+During training:
+
+Learning rate → usually constant
+Weights → keep changing
+
+Goal:
+
+Find weights that correctly classify the data 8. Final Result
+
+The perceptron learns a decision boundary (line):
+
+w1*x1 + w2*x2 + b = 0
+
+This line separates the two classes.
+
+Example visualization:
+
+Class 0 | Decision Boundary | Class 1
+● ● ● ● | line | ▲ ▲ ▲ ▲
+● ● ● ● | | ▲ ▲ ▲ ▲
